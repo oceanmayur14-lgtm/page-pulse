@@ -1,0 +1,16 @@
+﻿{
+  "name": "page-pulse",
+  "version": "1.0.0",
+  "description": "Small web page audit tool for the Digital Heroes SDE task.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["page-audit", "seo", "fastapi-alternative", "digital-heroes"],
+  "author": "",
+  "license": "MIT"
+}

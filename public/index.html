@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Page Pulse audits any public URL for basic SEO and accessibility signals." />
+    <title>Page Pulse</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-band">
+        <div class="hero-copy">
+          <p class="eyebrow">URL audit tool</p>
+          <h1>Page Pulse</h1>
+          <p>Check the page signals that matter before shipping: status, speed, title, description, headings, image alt coverage, and readable word count.</p>
+        </div>
+        <form id="audit-form" class="audit-form" novalidate>
+          <label for="url-input">Website URL</label>
+          <div class="input-row">
+            <input id="url-input" name="url" type="url" placeholder="https://digitalheroesco.com" autocomplete="url" required />
+            <button id="audit-button" type="submit">Audit</button>
+          </div>
+          <p id="form-hint" class="hint">HTTP and HTTPS pages are supported. Large pages are capped for safety.</p>
+        </form>
+      </section>
+
+      <section id="message" class="message" hidden></section>
+
+      <section id="report" class="report" hidden aria-live="polite">
+        <div class="report-header">
+          <div>
+            <p class="eyebrow">Audit report</p>
+            <h2 id="report-title">Results</h2>
+          </div>
+          <span id="status-pill" class="status-pill">Ready</span>
+        </div>
+
+        <div class="metrics-grid">
+          <article class="metric"><span>HTTP status</span><strong id="http-status">-</strong></article>
+          <article class="metric"><span>Response time</span><strong id="response-time">-</strong></article>
+          <article class="metric"><span>H1 count</span><strong id="h1-count">-</strong></article>
+          <article class="metric"><span>Images missing alt</span><strong id="missing-alt">-</strong></article>
+          <article class="metric"><span>Approx. words</span><strong id="word-count">-</strong></article>
+        </div>
+
+        <div class="detail-grid">
+          <article>
+            <span>Page title</span>
+            <p id="page-title">-</p>
+          </article>
+          <article>
+            <span>Meta description</span>
+            <p id="meta-description">-</p>
+          </article>
+          <article>
+            <span>Final URL</span>
+            <p><a id="final-url" href="#" target="_blank" rel="noopener noreferrer">-</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer">Built for Digital Heroes Training Task</a>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
